@@ -1,0 +1,128 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* Global */
+html {
+    font-family: 'Chivo Mono', monospace;
+    box-sizing: border-box;
+    font-size: 65.2%;
+}
+li {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Tablero */
+#board, .board-info {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#start, .board-info {
+    font-size: 25px;
+}
+
+.board-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: .8rem;
+    border-radius: 5px;
+}
+
+/* Botón start */
+#start {
+    background-color: #DD5353;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+#start:hover {
+    position: relative;
+    font-size: 3rem;
+    transition: .3s ease-in-out;
+    width: auto;
+    height: auto;
+}
+
+/* Table score */
+#scores-board {
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+}
+
+.table-score {
+    font-size: 2.5rem;
+    background-color: #FFD372;
+    width: fit-content;
+    border: 2px solid black;
+    font-family: 'Unbounded', cursive;
+    position: absolute;
+    top: 1px;
+}
+
+#score-board {
+    display: inline-flex;
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+/* Cuadrados del tablero, vacio, snake y comida */
+.emptySquare {
+    background-color: #3D8361;
+}
+
+.snakeSquare {
+    background-color: #FFD372;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.foodSquare {
+    background-color: #DD5353;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+/* PopUp Game Over */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    background-color: rgba(0 0 0 / .5);
+
+}
+
+.btn-cerrar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+
+}
+.btn-cerrar:hover {
+    cursor: pointer;
+}
